@@ -14,12 +14,19 @@ export default function App() {
   const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
-      {/* <Image style={styles.image} source={require("./assets/log2.png")} />  */}
+     <Image source={{uri: 'https://www.equitybulls.com/equitybullsadmin/uploads/Kotak%20Mahindra%20Bank%20Limited%20Logo.jpg'}}
+       style={{
+        width: 180,
+        height: 100,
+        resizeMode: 'contain',
+        marginBottom:50,
+        borderRadius:8
+      }} />
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
+          placeholder="Email"
           placeholderTextColor="#003f5c"
           onChangeText={(email) => setEmail(email)}
         /> 
@@ -27,7 +34,7 @@ export default function App() {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
+          placeholder="Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
@@ -53,8 +60,9 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "grey",
     borderRadius: 30,
+    borderColor:'red',
     width: "70%",
     height: 45,
     marginBottom: 20,
@@ -68,7 +76,7 @@ const styles = StyleSheet.create({
   },
   forgot_button: {
     height: 30,
-    marginBottom: 30,
+    marginBottom: 20,
   },
   loginBtn: {
     width: "80%",
@@ -76,7 +84,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
-    backgroundColor: "#FF1493",
+    marginTop: 10,
+    backgroundColor: "brown",
   },
 });
